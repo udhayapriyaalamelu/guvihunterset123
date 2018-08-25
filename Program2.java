@@ -1,4 +1,4 @@
-package guvihunter1;
+package guvi;
 import java.util.*;
 public class Program2 {
 
@@ -11,24 +11,24 @@ for(int i=0;i<n;i++)
 {
 	arr[i]=sc.nextInt();
 }
-int temp=0;
+System.out.println("enter the position to search:");
+int pos=sc.nextInt();
+int max=0;
 for(int i=0;i<n;i++)
 {
-	for(int j=i+1;j<n;j++)
+	for(int j=0;j<n;j++)
 	{
-		if(arr[i]<arr[j])
+		if(arr[i]>arr[j])
+			
 		{
-			temp=arr[i];
-			arr[i]=arr[j];
-			arr[j]=temp;
+			max=arr[j];
+			arr[j]=arr[i];
+			arr[i]=max;
 		}
 	}
 }
-for(int i=0;i<n-1;i++)
-{
-	System.out.print(arr[i]+" ");
-}
-System.out.print(arr[n-1]);
+	System.out.println(arr[n-pos]);
+
 	}
 
 }
